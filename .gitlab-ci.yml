@@ -1,0 +1,22 @@
+stages:
+  - build
+  - test
+  - sast
+
+build:
+  stage: build
+  script:
+    - echo "Building the application..."
+    - ./build_script.sh # Substitua pelo seu script de build
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - ./test_script.sh # Substitua pelo seu script de teste
+
+sast:
+  stage: sast
+  script:
+    - echo "Running SAST..."
+    - ./run_sast.sh # Substitua pelo comando da ferramenta SAST
